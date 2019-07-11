@@ -354,10 +354,12 @@ public class Megaman2 : MonoBehaviour
 		int index =1;
         foreach(string current in digitstring){
             if(indexes.IndexOf(current)>-1){
+	    	yield return null;
                 yield return GridPoints[indexes.IndexOf(current)];
+		yield return GridPoints[indexes.IndexOf(current)];
             }
             else{
-                yield return null;
+                		yield return null;
 				yield return "sendtochaterror Location not valid.";
 				yield break;
             }
